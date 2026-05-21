@@ -1,0 +1,27 @@
+{
+  "site": "Yinpeng Su — Forest Research Software Portfolio",
+  "version": "forest-trilingual-mvp",
+  "languages": [
+    "English",
+    "中文",
+    "Français"
+  ],
+  "local_only": true,
+  "visual_identity": "green forest + deer",
+  "featured_project": "WorkLord Toolbox",
+  "figures_in_gallery": [
+    "beta-variation-1.png",
+    "capacity-zone-beta-1.png",
+    "capacity-zone-beta-2.png",
+    "efficiency-time-beta-1-wt10000.png",
+    "stress-time-beta-1-wt10000.png",
+    "efficiency-time-beta-3-wt9750.png"
+  ],
+  "displayName": "Yinpeng Su",
+  "linkedin": "https://www.linkedin.com/in/yinpeng-su-4626a0369/",
+  "github": "https://github.com/YinpengSu-Concordia",
+  "publicEmail": "hidden",
+  "phone": "hidden",
+  "recommendedRepository": "YinpengSu-Portfolio",
+  "desiredSiteName": "YinpengSu Portfolio"
+}

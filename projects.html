@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Yinpeng Su</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="projects">
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Home"><span class="brand-mark">🦌</span><span class="brand-text"><span>Yinpeng Su</span><small data-i18n="brandSubtitle">Personal Research Portfolio</small></span></a>
+  <div class="header-actions">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" data-nav="home" data-i18n="navHome">Home</a>
+      <a href="cv.html" data-nav="cv" data-i18n="navCV">CV</a>
+      <a href="projects.html" data-nav="projects" data-i18n="navProjects">Projects</a>
+      <a href="index.html#contact" data-i18n="navContact">More Info</a>
+    </nav>
+    <div class="lang-switch" aria-label="Language switcher">
+      <button type="button" data-lang="en" class="active">EN</button>
+      <button type="button" data-lang="zh">中</button>
+      <button type="button" data-lang="fr">FR</button>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main>
+  <section class="page-hero">
+    <p class="section-kicker" data-i18n="projKicker">Projects & Interactive Research Demos</p>
+    <h1 data-i18n="projHeroTitle">One project, shown as code, figures, and an interactive explanation.</h1>
+    <p data-i18n="projHeroBody">This page focuses on WorkLord because it represents the workflow I want to keep developing: theory → Python toolbox → figures → web-based explanation.</p>
+  </section>
+
+  <section class="section compact">
+    <article class="project-brief">
+      <p class="section-kicker" data-i18n="featuredKicker">Featured Project</p>
+      <h2 data-i18n="worklordTitle">WorkLord Toolbox: Human Workload Simulation and Capacity Zone Visualization</h2>
+      <p data-i18n="worklordBody1">This project grew out of my learning and replication work on mental workload, performance zones, and task allocation in human–autonomy teaming.</p>
+      <p data-i18n="worklordBody2">For me, WorkLord is not only about generating curves. It is a way to practice turning a theoretical model into a research-oriented tool: from reading the paper, implementing Python simulations, organizing code, producing figures, and finally presenting the idea through an interactive web interface.</p>
+      <p data-i18n="worklordBody3">The demo on this website is a simplified visual explanation tool. The full computation, replication, and figure generation remain implemented in the Python Toolbox.</p>
+      <div class="project-meta">
+        <div><strong data-i18n="metaRole">Role</strong><span data-i18n="metaRoleBody">Replication, organization, visualization, web presentation</span></div>
+        <div><strong data-i18n="metaStack">Stack</strong><span>Python · NumPy · Matplotlib · HTML/CSS/JS</span></div>
+        <div><strong data-i18n="metaValue">Research value</strong><span data-i18n="metaValueBody">Model → code → figures → interactive explanation</span></div>
+        <div><strong data-i18n="metaTheory">Theory</strong><span>Mengting Zhao · Dongyu Qiu · Yong Zeng</span></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section muted metric-section">
+    <div class="section-header">
+      <p class="section-kicker" data-i18n="metricsKicker">Model Variables</p>
+      <h2 data-i18n="metricsTitle">What do these variables mean in real life?</h2>
+      <p data-i18n="metricsBody">The sliders below are simplified, but each one has a concrete interpretation. This is where the model stops being only a formula and starts becoming something people can reason about.</p>
+    </div>
+    <div class="metric-grid">
+      <article class="metric-card"><h3>Task Workload</h3><p data-i18n="metricWorkload">The demand created by the task itself. It can reflect complexity, time pressure, information load, and operational burden.</p></article>
+      <article class="metric-card"><h3>Mental Capacity</h3><p data-i18n="metricCapacity">The current upper limit of mental resources available for handling the task. It is affected by fatigue, attention, stress, preparation, and the person’s current state.</p></article>
+      <article class="metric-card"><h3>β</h3><p data-i18n="metricBeta">β represents a person’s baseline capability for this type of task in the simplified model. The same math problem may be heavy for an elementary school student but much easier for a university student.</p></article>
+      <article class="metric-card"><h3>Stress Limit</h3><p data-i18n="metricStressLimit">The boundary before stress, fatigue, or overload becomes more obvious.</p></article>
+      <article class="metric-card"><h3>Maximum Efficiency</h3><p data-i18n="metricEfficiency">The highest efficiency that the person could reach under favorable conditions in this simplified visualization.</p></article>
+      <article class="metric-card"><h3>Capacity Zone</h3><p data-i18n="metricZone">A useful region where the task is challenging enough to engage performance, but still manageable for the person and their current state.</p></article>
+    </div>
+  </section>
+
+  <section id="interactive-demo" class="section">
+    <div class="section-header">
+      <p class="section-kicker" data-i18n="interactiveKicker">Interactive Demo</p>
+      <h2 data-i18n="interactiveTitle">A simplified workload-efficiency simulator</h2>
+      <p data-i18n="interactiveBody">Move the sliders to change the curve. Then press the interpretation button to see a short explanation of the current situation.</p>
+    </div>
+    <div class="demo-grid enhanced-demo-grid">
+      <aside class="control-panel demo-card">
+        <label><span data-i18n="sliderCapacity">Mental Capacity</span><output id="capacityValue">260</output><input id="capacity" type="range" min="100" max="520" step="10" value="260"></label>
+        <label><span data-i18n="sliderBeta">Individual Capability β</span><output id="betaValue">1.20</output><input id="beta" type="range" min="0.60" max="2.50" step="0.05" value="1.20"></label>
+        <label><span data-i18n="sliderWorkload">Task Workload</span><output id="workloadValue">210</output><input id="workload" type="range" min="30" max="650" step="5" value="210"></label>
+        <label><span data-i18n="sliderSigma">Stress Limit</span><output id="sigmaValue">0.85</output><input id="sigma" type="range" min="0.55" max="1.35" step="0.05" value="0.85"></label>
+        <label><span data-i18n="sliderEpsilon">Maximum Efficiency</span><output id="epsilonValue">100</output><input id="epsilon" type="range" min="60" max="150" step="5" value="100"></label>
+        <div id="demoStatus" class="status-card"><strong>Capacity Zone</strong><span>Move sliders to update the curve.</span></div>
+        <button id="interpretBtn" type="button" class="button primary full-button" data-i18n="btnInterpret">Interpret This Scenario</button>
+      </aside>
+      <div class="canvas-panel demo-card">
+        <canvas id="worklordCanvas" width="980" height="560" aria-label="Interactive workload-efficiency curve"></canvas>
+        <div class="legend">
+          <span><i class="zone-blue"></i><em data-i18n="zoneLaid">Laid-back Zone</em></span>
+          <span><i class="zone-green"></i><em data-i18n="zoneCapacity">Capacity Zone</em></span>
+          <span><i class="zone-red"></i><em data-i18n="zoneFatigue">Fatigue Zone</em></span>
+          <span><i class="line-black"></i><em data-i18n="humanCurve">Human efficiency curve</em></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section muted">
+    <div class="section-header">
+      <p class="section-kicker" data-i18n="galleryKicker">Figure Gallery</p>
+      <h2 data-i18n="galleryTitle">Figures generated by the Python Toolbox</h2>
+      <p data-i18n="galleryBody">The figures below come from simulation and visualization outputs generated by the WorkLord Python Toolbox. The web demo is a simplified explanation layer, while these figures are closer to the full computational output.</p>
+    </div>
+    <div class="gallery-grid"><figure class="gallery-card" data-full="assets/figures/beta-variation-1.png"><img src="assets/figures/beta-variation-1.png" alt="WorkLord beta variation figure"><figcaption><strong data-i18n="fig1Title">Capability comparison</strong><span data-i18n="fig1Desc">Shows how changing β alters the workload-efficiency relationship.</span></figcaption></figure>
+<figure class="gallery-card" data-full="assets/figures/capacity-zone-beta-1.png"><img src="assets/figures/capacity-zone-beta-1.png" alt="WorkLord capacity zone figure"><figcaption><strong data-i18n="fig2Title">Capacity zone overview</strong><span data-i18n="fig2Desc">A direct visual explanation of laid-back, capacity, and fatigue zones.</span></figcaption></figure>
+<figure class="gallery-card" data-full="assets/figures/capacity-zone-beta-2.png"><img src="assets/figures/capacity-zone-beta-2.png" alt="WorkLord capacity zone variation figure"><figcaption><strong data-i18n="fig3Title">Capacity zone variation</strong><span data-i18n="fig3Desc">Shows how the productive region shifts under different parameter settings.</span></figcaption></figure>
+<figure class="gallery-card" data-full="assets/figures/efficiency-time-beta-1-wt10000.png"><img src="assets/figures/efficiency-time-beta-1-wt10000.png" alt="WorkLord efficiency over time"><figcaption><strong data-i18n="fig4Title">Efficiency over time</strong><span data-i18n="fig4Desc">Tracks simulated work efficiency across a task process.</span></figcaption></figure>
+<figure class="gallery-card" data-full="assets/figures/stress-time-beta-1-wt10000.png"><img src="assets/figures/stress-time-beta-1-wt10000.png" alt="WorkLord stress over time"><figcaption><strong data-i18n="fig5Title">Stress over time</strong><span data-i18n="fig5Desc">Shows how stress may accumulate during a simulated task process.</span></figcaption></figure>
+<figure class="gallery-card" data-full="assets/figures/efficiency-time-beta-3-wt9750.png"><img src="assets/figures/efficiency-time-beta-3-wt9750.png" alt="WorkLord high capacity efficiency"><figcaption><strong data-i18n="fig6Title">High-capability efficiency case</strong><span data-i18n="fig6Desc">Shows how a stronger capability setting can reshape efficiency dynamics.</span></figcaption></figure></div>
+  </section>
+
+  <section class="section muted code-section">
+    <div class="section-header">
+      <p class="section-kicker" data-i18n="archKicker">Code Architecture</p>
+      <h2 data-i18n="archTitle">How I organized the research artifact</h2>
+      <p data-i18n="archBody">I organized the project into several clear components: parameter configuration, formulas and variables, simulation engine, visualization functions, user interaction, and result outputs. Research code should not only run; it should also make it clear how it runs, where the results come from, and which parameters can be adjusted.</p>
+    </div>
+    <div class="architecture-grid">
+      <article class="architecture-card"><h3>config/</h3><p data-i18n="archConfig">Default simulation parameters and reusable settings.</p></article>
+      <article class="architecture-card"><h3>scripts/</h3><p data-i18n="archScripts">Entry point for running the toolbox workflow.</p></article>
+      <article class="architecture-card"><h3>workload_code/</h3><p data-i18n="archCode">Core formulas, simulation engine, visualization, and user interface logic.</p></article>
+      <article class="architecture-card"><h3>results/</h3><p data-i18n="archResults">Generated figures and execution logs for traceable output.</p></article>
+      <article class="architecture-card"><h3>docs/</h3><p data-i18n="archDocs">Paper, report, and slide materials that explain the research context.</p></article>
+      <article class="architecture-card"><h3>web demo</h3><p data-i18n="archWeb">A static front-end layer that communicates the model visually.</p></article>
+    </div>
+  </section>
+
+  <section class="section cta-band">
+    <div>
+      <p class="section-kicker" data-i18n="learningKicker">What I Learned</p>
+      <h2 data-i18n="learningTitle">From an abstract model to something people can inspect.</h2>
+      <p data-i18n="learningBody">This project helped me practice how to break down, replicate, organize, and present a theoretical model. The most valuable part was turning an abstract research concept into runnable code, saved figures, an explainable webpage, and a project structure that can be extended later.</p>
+    </div>
+    <a class="button secondary" href="cv.html" data-i18n="footerCV">CV</a>
+  </section>
+</main>
+<div id="scenarioModal" class="scenario-modal" aria-hidden="true" role="dialog" aria-labelledby="scenarioTitle">
+  <div class="scenario-dialog">
+    <button class="modal-close" type="button" aria-label="Close">×</button>
+    <p class="section-kicker" data-i18n="scenarioKicker">Scenario Interpretation</p>
+    <h2 id="scenarioTitle">Capacity Zone</h2>
+    <p id="scenarioIntro"></p>
+    <div class="scenario-cards">
+      <article><h3 data-i18n="scenarioEfficiency">Efficiency</h3><div class="meter"><span id="effMeter"></span></div><p id="effText"></p></article>
+      <article><h3 data-i18n="scenarioStress">Stress</h3><div class="meter stress-meter"><span id="stressMeter"></span></div><p id="stressText"></p></article>
+      <article><h3 data-i18n="scenarioZone">Zone</h3><p id="zoneText"></p></article>
+    </div>
+    <p class="scenario-note" data-i18n="scenarioBetaNote">In this scenario, the workload is interpreted together with the person’s current mental capacity and individual capability parameter β. The same workload may lead to different performance depending on who is doing the task and what state they are currently in.</p>
+  </div>
+</div>
+<div id="lightbox" class="lightbox" aria-hidden="true"><button type="button" aria-label="Close">×</button><img src="" alt="Expanded WorkLord figure"></div>
+<footer class="site-footer">
+  <div>
+    <strong>Yinpeng Su</strong><br>
+    <span class="footer-mark" data-i18n="footerLine">Research software · Data visualization · Personal portfolio</span>
+  </div>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/yinpeng-su-4626a0369/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/YinpengSu-Concordia" target="_blank" rel="noopener">GitHub</a>
+    <a href="projects.html#interactive-demo" data-i18n="footerDemo">Interactive Demo</a>
+    <a href="cv.html" data-i18n="footerCV">CV</a>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
