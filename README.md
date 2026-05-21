@@ -8,7 +8,7 @@ The site is static, trilingual, and GitHub Pages ready. It uses a forest/deer vi
 
 ## Live site
 
-After GitHub Pages is enabled, the site should be available here:
+the site should be available here:
 
 ```text
 https://YinpengSu-Concordia.github.io/YinpengSu-Portfolio/
@@ -109,82 +109,6 @@ YinpengSu-Portfolio/
         ├── efficiency-time-beta-3-wt9750.png
         └── stress-time-beta-1-wt10000.png
 ```
-
-## How to open locally
-
-Option 1 — direct open:
-
-```text
-Double-click index.html
-```
-
-Option 2 — VS Code:
-
-```text
-Open folder → YinpengSu-Portfolio → Live Server
-```
-
-No backend, database, build step, package manager, or external CDN is required.
-
-## How to deploy with GitHub Pages
-
-1. Create a public repository named:
-
-```text
-YinpengSu-Portfolio
-```
-
-2. Upload all files in this folder to the repository root.
-
-3. Go to:
-
-```text
-Settings → Pages
-```
-
-4. Choose:
-
-```text
-Deploy from a branch
-```
-
-5. Select:
-
-```text
-main / root
-```
-
-6. Save and wait for GitHub Pages to publish the site.
-
-Expected URL:
-
-```text
-https://YinpengSu-Concordia.github.io/YinpengSu-Portfolio/
-```
-
-## How to update the site later
-
-Most text and translation content is managed through:
-
-```text
-assets/js/main.js
-```
-
-Main visual styling is in:
-
-```text
-assets/css/style.css
-```
-
-To update images, replace files in:
-
-```text
-assets/images/
-assets/figures/
-docs/readme-assets/
-```
-
-When changing file names, update the corresponding paths in the HTML or README.
 
 ## Notes on authorship and credit
 
