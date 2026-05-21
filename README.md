@@ -84,7 +84,6 @@ YinpengSu-Portfolio/
 ├── cv.html
 ├── projects.html
 ├── README.md
-├── FINAL_PUBLIC_SITE_NOTES.md
 ├── .nojekyll
 ├── data/
 │   └── project_metadata.json
@@ -99,8 +98,7 @@ YinpengSu-Portfolio/
     │   └── main.js
     ├── images/
     │   ├── hero-forest.jpg
-    │   ├── deer-forest.jpg
-    │   └── research-talk.jpg
+    │   └── deer-forest.jpg
     └── figures/
         ├── beta-variation-1.png
         ├── capacity-zone-beta-1.png
