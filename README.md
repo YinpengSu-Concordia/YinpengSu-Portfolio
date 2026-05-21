@@ -32,11 +32,9 @@ This website is meant to give a quick but grounded view of my technical backgrou
 - interactive project explanation
 - technical writing and project documentation
 
-It is also a small example of how I would present a research project for a lab, supervisor, course project, or collaboration page.
-
 ## Suggested viewing route
 
-For a professor, supervisor, or researcher reviewing this portfolio, I recommend this route:
+I recommend this route:
 
 1. **Home** — who I am, how I organize technical work, and a little personal context.
 2. **CV** — education, research experience, technical skills, and selected projects.
